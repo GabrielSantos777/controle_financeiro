@@ -11,6 +11,7 @@
   <script src="./script.js" defer></script>
   <script src="https://cdn.canvasjs.com/ga/jquery.canvasjs.min.js"></script>
   <script src="https://cdn.canvasjs.com/ga/jquery.canvasjs.stock.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -49,65 +50,64 @@
             </li>
             <li>
               <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Lançamentos</span> </a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
+                <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Relatórios</span></a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
+                <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Metas</span></a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Conexão</span> </a>
             </li>
           </ul>
 
 
           <!-- Menu inferior -->
-          <div class="dropdown py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
+          <div class="dropdown">
+
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="user">
+              <!-- <img src="https://github.com/mdo.png" alt="hugenerd" width="28" height="28" class="rounded-circle"> -->
+              <span class="material-icons">
+                notifications
+              </span>
+            </a>
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="material-icons">
                 settings
               </span>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item p-2" href="#">Categorias</a></li>
+              <li><a class="dropdown-item p-2" href="#">Contas</a></li>
+              <li><a class="dropdown-item p-2" href="#">Cartões de Crédito</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li><a class="dropdown-item p-2" href="#">Atividades</a></li>
+              <li><a class="dropdown-item p-2" href="#">Meu Plano</a></li>
             </ul>
-            <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="user">
-              <!-- <img src="https://github.com/mdo.png" alt="hugenerd" width="28" height="28" class="rounded-circle"> -->
-              <span class="material-icons">
-                alert
-              </span>
-            </a>
-            <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="user">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false">
               <!-- <img src="https://github.com/mdo.png" alt="hugenerd" width="28" height="28" class="rounded-circle"> -->
               <span class="material-icons">
                 account_circle
               </span>
+
             </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownProfile">
+              <div class="d-flex flex-column justify-content-center fotoProfile">
+                <img src="https://github.com/mdo.png" alt="hugenerd" width="42" height="42" class="rounded-circle">
+              </div>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item p-2" href="#">Minha Conta</a></li>
+              <li><a class="dropdown-item p-2" href="#">Sair</a></li>
+            </ul>
           </div>
         </div>
 
@@ -156,16 +156,16 @@
                   <h5 class="text-center mb-4">Acesso rápido</h5>
                   <div class="d-flex justify-content-around flex-wrap gap-2">
                     <button class="btn btn-danger d-flex flex-column align-items-center">
-                      <span class="material-icons mb-1">do_disturb_on</span>DESPESA
+                      <span class="material-icons mb-1">do_disturb_on</span>Despesas
                     </button>
                     <button class="btn btn-success d-flex flex-column align-items-center">
-                      <span class="material-icons mb-1">add_circle_outline</span>RECEITA
+                      <span class="material-icons mb-1">add_circle_outline</span>Receita
                     </button>
                     <button class="btn btn-secondary d-flex flex-column align-items-center">
-                      <span class="material-icons mb-1">swap_horizontal_circle</span>TRANSF.
+                      <span class="material-icons mb-1">swap_horizontal_circle</span>Transf.
                     </button>
                     <button class="btn btn-primary d-flex flex-column align-items-center">
-                      <span class="material-icons mb-1">get_app</span>IMPORTAR
+                      <span class="material-icons mb-1">get_app</span>Importar
                     </button>
                   </div>
                 </div>
@@ -196,23 +196,26 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="cards_maiores position-relative p-4 pt-3">
-                  <div class="mb-4 d-flex justify-content-center align-items-center" style="color:#fff">
-                    <span class="title_cards">Nível da meta principal</span>
-                  </div>
-                  <div class="loader">
-                    <div class="waves position-absolute"></div>
-                  </div>
-                  <div class="porcent" style="color:#fff">
-                    <div class="vlr">50%</div>
-                  </div>
+              <div class="meta-card col-12 col-md-6 col-lg-4 cards">
+                <div class="circle-progress">
+                  <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring__bg" cx="60" cy="60" r="50" />
+                    <circle class="progress-ring__value" cx="60" cy="60" r="50" />
+                  </svg>
+                  <div class="percentage-text">50%</div>
                 </div>
+                <div class="label">Nível da meta principal</div>
               </div>
 
+
+              <div class="meta-card col-12 cards">
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+              </div>
+              
             </div>
 
           </div>
+
         </div>
 
       </div>
