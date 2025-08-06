@@ -33,7 +33,7 @@
         <div class="sidebar" id="sidebar">
           <!-- Logo e Menu -->
           <div class="logo">
-            <span class="logo-text">Dashboard GNR</span>
+            <span class="logo-text">Dashboard GR</span>
           </div>
 
           <!-- Botão do menu sempre visível -->
@@ -45,24 +45,39 @@
           <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
             <li class="nav-item">
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
+                <span class="material-icons">
+                  dashboard
+                </span>
+                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
               </a>
             </li>
             <li>
               <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Lançamentos</span> </a>
+                <span class="material-icons">
+                  library_add
+                </span>
+                <span class="ms-1 d-none d-sm-inline">Lançamentos</span> </a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Relatórios</span></a>
+                <span class="material-icons">
+                  assignment
+                </span>
+                <span class="ms-1 d-none d-sm-inline">Relatórios</span></a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Metas</span></a>
+                <span class="material-icons">
+                  flag
+                </span>
+                <span class="ms-1 d-none d-sm-inline">Metas</span></a>
             </li>
             <li>
               <a href="#" class="nav-link px-sm-0 px-2">
-                <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Conexão</span> </a>
+                <span class="material-icons">
+                  share
+                </span>
+                <span class="ms-1 d-none d-sm-inline">Conexão</span> </a>
             </li>
           </ul>
 
@@ -211,7 +226,7 @@
               <div class="meta-card col-12 cards">
                 <div id="chart_div" style="width: 900px; height: 500px;"></div>
               </div>
-              
+
             </div>
 
           </div>
