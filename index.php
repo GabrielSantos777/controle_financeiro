@@ -67,7 +67,7 @@ $title = ucfirst($page); // Apenas capitaliza o nome da página
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link px-sm-0 px-2">
+              <a href="index.php?page=teas" class="nav-link px-sm-0 px-2">
                 <span class="material-icons">
                   assignment
                 </span>
@@ -138,9 +138,10 @@ $title = ucfirst($page); // Apenas capitaliza o nome da página
 
 
 
+        
         <!-- Conteúdo principal -->
         <div class="main-content p-3">
-
+        
           <?php
           if (file_exists($view)) {
             include $view;
@@ -149,7 +150,6 @@ $title = ucfirst($page); // Apenas capitaliza o nome da página
           }
           ?>
         </div>
-
       </div>
     </div>
   </div>
