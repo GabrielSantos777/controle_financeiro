@@ -2,12 +2,16 @@ $(document).ready(function () {
   //BARRA DE PROGRESSO DA META
 
   const circle = document.querySelector(".progress-ring__value");
-  const radius = circle.r.baseVal.value;
-  const circumference = 2 * Math.PI * radius;
 
-  function setProgress(percent) {
-    const offset = circumference - (percent / 100) * circumference;
-    circle.style.strokeDashoffset = offset;
+  if (circle) {
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    function setProgress(percent) {
+      const offset = circumference - (percent / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
   }
 
   // MENU SIDEBAR
@@ -15,15 +19,25 @@ $(document).ready(function () {
   const sidebar = document.querySelector(".sidebar");
   const toggle = document.querySelector(".menu-toggle");
 
-  sidebar.classList.add("collapsed");
+  const savedMenuState = localStorage.getItem("sidebarState");
 
+  if (savedMenuState === "expanded") {
+    sidebar.classList.add("fixed");
+    sidebar.classList.remove("collapsed");
+  } else {
+    sidebar.classList.add("collapsed");
+  }
+
+  // Evento de clique para alternar o menu
   toggle.addEventListener("click", () => {
     sidebar.classList.toggle("fixed");
 
     if (sidebar.classList.contains("fixed")) {
       sidebar.classList.remove("collapsed");
+      localStorage.setItem("sidebarState", "expanded");
     } else {
       sidebar.classList.add("collapsed");
+      localStorage.setItem("sidebarState", "collapsed");
     }
   });
 
