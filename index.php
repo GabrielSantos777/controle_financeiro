@@ -59,7 +59,7 @@ $title = ucfirst($page); // Apenas capitaliza o nome da página
               </a>
             </li>
             <li>
-              <a href="index.php?page=teste" class="nav-link px-sm-0 px-2">
+              <a href="index.php?page=lancamentos" class="nav-link px-sm-0 px-2">
                 <span class="material-icons">
                   library_add
                 </span>
